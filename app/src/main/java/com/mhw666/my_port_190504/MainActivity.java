@@ -45,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
             com=new SerialPort("/dev/ttySAC1",115200);
             boolean b=com.Open();
             Message msg2=new Message();
+
             msg2.obj="串口打开"+(b?"成功":"失败");
             handler.sendMessage(msg2);
             if(b){
